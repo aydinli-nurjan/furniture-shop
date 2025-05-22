@@ -101,6 +101,32 @@ body {
     display: none;
 }
 
+.productmain{
+    width: 100%;
+    min-height: 400px;
+    float: left;
+    background-color: rgb(234, 246, 250);
+    padding: 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.disp{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.producth1{
+    font-family: var(--font-family);
+    font-size: 26px;
+    font-weight: 600;
+    text-align: left;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
 .ph img {
     width: 100%;
     height: 749px;
@@ -230,6 +256,37 @@ body {
     height: 90px;
     /* background-color: #276dc3; */
     margin-bottom: 50px;
+}
+
+.a{
+    text-decoration: none !important;
+    color: inherit;
+    display: block;
+    text-decoration-line: none;
+}
+
+.brendfon{
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: left;
+    color: #333333;
+    margin-left: 15px;
+}
+
+.brendp{
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: 650;
+    margin-left: 15px;
+}
+
+.brend{
+    font-family: var(--font-family);
+    width: 100%;
+    margin-left: 15px;
+    height: 400px;
 }
 
 .word {
@@ -379,6 +436,7 @@ body {
 .image {
     width: 381px;
     height: 480px;
+    border-radius: 20px;
     margin-bottom: 32px;
 }
 
@@ -388,6 +446,11 @@ body {
     /* background-color: #276dc3; */
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+}
+
+.ph0t0 .wrdandpht:nth-child(n+4){
+    display: none;
 }
 
 .wrdandpht {
@@ -757,11 +820,6 @@ body {
         height: 110px;
         justify-content: center;
     }
-
-    .allin {
-        border: #276dc3 solid 1px;
-    }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -859,7 +917,7 @@ body {
 
     .mrt {
         margin-top: 410px;
-        margin-left: -35px!important;
+        margin-right: 0!important;
     }
 
     .words {
@@ -908,8 +966,13 @@ body {
 
     }
 
+    .disp{
+        display: flex;
+        flex-direction: column;
+    }
+
     .ser {
-        width: 80%;
+        width: 100%;
         height: 80%;
         margin-bottom: 20px;
     }
@@ -922,6 +985,11 @@ body {
 @media screen and (max-width: 600px) {
     .circle {
         display: block;
+    }
+
+    .disp{
+        display: flex;
+        flex-direction: column;
     }
 
     .hrhr {
@@ -990,26 +1058,6 @@ body {
         height: 76px;
     }
 
-    /* .information span{
-        color: #333333;
-        font-size: 15px;
-        font-family: var(--font-family);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19.5px;
-        text-align: left;
-        margin-bottom: 2px;
-    }
-
-    .information p{
-        font-family: var(--font-family);
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 29px;
-        text-align: left;
-        color: #333333;
-    } */
-
     .center1 {
         height: 920px;
         display: block;
@@ -1060,21 +1108,22 @@ body {
 
     .photo_3 {
         width: 100%;
-        height: 1280px;
+        min-height: 1590px;
         padding: 0px 27px;
         display: block;
         justify-content: left;
     }
 
     .idk {
-        width: 305px;
+        width: 385px;
         height: 372px;
         padding-top: 38px;
     }
 
     .images {
-        width: 305px;
-        height: 384px;
+        margin-left: 20px;
+        width: 405px;
+        height: 484px;
     }
 
     .word p {
@@ -1089,8 +1138,8 @@ body {
     }
 
     .mrt {
-        margin-top: 410px;
-        margin-left: -80px !important;
+        margin-top: 515px;
+        margin-left: -222px!important;
     }
 
     .words {
@@ -1098,12 +1147,12 @@ body {
     }
 
     .mrtt {
-        margin-top: 75px;
+        margin-top: 177px;
     }
 
     .image {
-        width: 331px;
-        height: 430px;
+        width: 351px;
+        height: 450px;
         margin-bottom: 12px;
     }
 
@@ -1126,16 +1175,21 @@ body {
         margin-right: 17px;
     }
 
+    .height{
+        height:1180px
+    }
+
     .ph0t0 {
-        height: 1644px;
+        min-height: 124px;
         display: block;
-        justify-content: left;
-        padding: 0px 29px !important;
+        justify-content: center!important;
+        padding: 50px 88px !important;
+        overflow: hidden;
     }
 
     .wrdandpht {
         height: 520px;
-        margin-top: 25px;
+        /* margin-top: 25px; */
     }
 
     .allin {
@@ -1150,6 +1204,11 @@ body {
         width: 80%;
         height: 80%;
         margin-bottom: 20px;
+        margin-left: 50px;
+    }
+
+    .circle1{
+        margin-left: 50px;
     }
 
     .show {
@@ -1163,8 +1222,6 @@ body {
     .howitworks {
         height: 750px;
     }
-
-
 
     .mrl {
         margin-left: 25.6%;
@@ -1194,69 +1251,4 @@ body {
     .nn{
         display: none;
     }
-
-
-    /* Гамбургер иконка */
-    /* .menu-btn {
-        width: 30px;
-        height: 30px;
-        position: relative;
-        z-index:2;
-        overflow: hidden;
-    }
-    
-    .menu-btn .bar {
-        width: 30px;
-        height: 4px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        border-radius: 4px;
-        transform: translate(-50%, -50%);
-        background-color: blue;
-        transition: all 0.3s ease-in-out;
-    }
-    
-    .menu-btn .bar:nth-of-type(2) {
-        top: calc(50% - 9px);
-    }
-    .menu-btn .bar:nth-of-type(3) {
-        top: calc(50% + 9px);
-    }
-     */
-    /* Меняем гамбургер иконку, когда меню открыто */
-    /* .menu-btn.active .bar:nth-of-type(1) {
-      display: none;
-    }
-    .menu-btn.active .bar:nth-of-type(2) {
-      top: 50%;
-      transform: translate(-50%, 0%) rotate(45deg);  
-    }
-    .menu-btn.active .bar:nth-of-type(3) {
-      top: 50%;
-      transform: translate(-50%, 0%) rotate(-45deg); 
-    } */
-
-    /* Меню, которое будет появляться */
-    /* .nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 15px;
-        background: #FFEFBA;
-        transform: translateX(100%);
-        transition: transform 0.5s; 
-    }
-    
-    .nav.active {
-        transform: translateX(0);
-    }
-    
-    .nav .nav__list_item {
-        list-style-type: none;
-    }
-     */
-
 }

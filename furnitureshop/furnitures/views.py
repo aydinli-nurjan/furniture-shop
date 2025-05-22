@@ -13,6 +13,7 @@ menu = [{'title': "Home", 'url_name': 'home'},
 
 def index(request):
     posts = Furnitures.objects.all()
+    print(posts)
     context =  {
         'posts': posts,
         'menu': menu,
@@ -21,27 +22,34 @@ def index(request):
     return render(request, 'furnitures/about.html',context=context)
 
 def about(request):
-
-    return render(request, 'furnitures/index.html', {'title': "about page"})
-
-# def about(request):
-#     menu = [
-#         {'title': "Home", 'url_name': 'home'},
-#         {'title': "Services", 'url_name': 'about'},
-#         {'title': "Products", 'url_name': 'products'},
-#     ]
-#     return render(request, 'index.html', {'menu': menu})
+    context =  {
+        'menu': menu,
+        'title': "about"
+        }
+    return render(request, 'furnitures/index.html',context=context)
 
 def products(request):
-     return render(request, 'furnitures/products.html')
-
+    posts = Furnitures.objects.all()
+    context =  {
+        'posts': posts,
+        'menu': menu,
+        'title': "posts"
+        }
+    return render(request, 'furnitures/products.html',context=context)
 
 def show_post(request,post_id):
-    return  HttpResponse(f'categories page<p>{post_id}<p>')
+    posts = Furnitures.objects.all()
+    context =  {
+        'posts': posts,
+        'post_id': post_id,
+        'menu': menu,
+        'title': "posts"
+        }
+    return render(request, 'furnitures/detail.html',context=context)
 
 def categories(request, categ):
     if(request.GET):
-        print(requets.GET)
+        print(request.GET)
     return HttpResponse(f'categories page<p>{categ}<p>')
 
 def archive (request, year):

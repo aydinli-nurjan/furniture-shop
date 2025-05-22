@@ -1,0 +1,29 @@
+{% extends "furnitures/base.html" %}
+{%load static%}
+
+
+{% block content %}
+
+    <div class='container'>
+        <div class='row'>
+            <div class="ph0t0 displayflex height">
+                {% for post in posts %}
+                    {% if post.pk == post_id  %}
+                        <div class="wrdandpht wow animate__animated animate__slideInLeft">
+                            <img class="image" src="{{post.photo.url}}" alt="">
+                        </div>
+                        <div>
+                            <p class="brendfon">{{post.title}}</p>
+                            <p class='brendp'>About this item</p>
+                            <div class='brend'>
+                                {{post.content}}
+                            </div>
+                        </div>
+                    {% endif %}  
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

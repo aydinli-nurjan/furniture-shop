@@ -15,9 +15,8 @@ class Furnitures(models.Model):
     def __str__(self):
        return self.title
 
-
-    #  def get_absolute_url(self):
-    #     return reverse('post', kwargs={'post_id': self.pk})
+    def get_absolute_url(self):
+       return reverse('post', kwargs={'post_id': self.pk})
 
     class Meta:
         verbose_name = 'Furnitures'

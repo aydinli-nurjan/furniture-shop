@@ -176,28 +176,19 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                     </div>
-                    <div class="ph0t0">
-                        <div class="wrdandpht wow animate__animated animate__slideInLeft">
-                            <img class="image" src="{%static 'furnitures/img/table.png'  %}" alt="">
-                            <div class="w381 displayflex">
-                                <p class="fon">Dining</p>
+                    <div class="row">
+                            <div class="ph0t0 displayflex">
+                                {% for post in posts %}
+                                    <a class="a" href="{{ post.get_absolute_url }}">
+                                        <div class="wrdandpht wow animate__animated animate__slideInLeft">
+                                            <img class="image" src="{{post.photo.url}}" alt="">
+                                            <div class="w381 displayflex">
+                                                <p class="fon">{{post.title}}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                {% endfor %}
                             </div>
-                        </div>
-                        <div class="wrdandpht mrl wow animate__animated animate__slideInUp">
-                            
-                            <img class="image" src="{%static 'furnitures/img/Image-living room.png'  %}" alt="">
-                            <div class="w381 displayflex">
-                                
-                                    <p class="link-read-post fon">Living</p>
-                                
-                            </div>
-                        </div>
-                        <div class="wrdandpht wow animate__animated animate__slideInRight">
-                            <img class="image" src="{%static 'furnitures/img/pillow.png'  %}" alt="">
-                            <div class="w381 displayflex">
-                                <p class="fon">Bedroom</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
